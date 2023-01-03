@@ -1,0 +1,18 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  build:
+    cmds:
+      - rm -fr types/ esm/ commonjs/
+      - tsc -p tsconfig.json
+      - tsc -p tsconfig-cjs.json
+      - tsc -p tsconfig-types.json
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
