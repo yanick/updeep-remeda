@@ -1,12 +1,12 @@
 {
   "type": "module",
-  "name": "updeep",
-  "version": "1.2.1",
+  "name": "updeep-remeda",
+  "version": "2.0.0",
   "description": "Easily update nested frozen objects and arrays in a declarative and immutable manner.",
-  "homepage": "https://github.com/substantial/updeep",
+  "homepage": "https://git.babyl.ca/yanick/updeep-remeda",
   "repository": {
     "type": "git",
-    "url": "https://github.com/substantial/updeep"
+    "url": "https://git.babyl.ca/yanick/updeep-remeda"
   },
   "author": "Aaron Jensen",
   "files": [
@@ -20,7 +20,6 @@
     "declarative"
   ],
   "source": "./src/index.ts",
-  "main": "./commonjs/index.js",
   "types": "./esm/index.d.ts",
      "exports": {
         ".": {
@@ -31,20 +30,15 @@
     }, 
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/substantial/updeep/issues"
+    "url": "https://git.babyl.ca/yanick/updeep-remeda/issues"
   },
   "scripts": {
-    "benchmark": "NODE_ENV=production node --require \"@babel/register\" perf",
-    "build": "microbundle",
-    "dev": "microbundle watch",
     "dtslint": "dtslint --localTs node_modules/typescript/lib types",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx",
-    "lint": "yarn -s eslint . && yarn -s dtslint",
-    "test": "mocha --recursive --require \"@babel/register\" test"
+    "lint": "yarn -s eslint . && yarn -s dtslint"
   },
   "dependencies": {
-    "remeda": "^1.3.0",
-    "updeep": "^1.2.1"
+    "remeda": "^1.3.0"
   },
   "devDependencies": {
     "@types/node": "*",
