@@ -11,7 +11,7 @@ function updateIfElse(object, predicate, trueUpdates, falseUpdates) {
 
 type Predicate = ((source: any) => boolean) | boolean;
 
-interface IfElse {
+export interface IfElse {
   (object, predicate: Predicate, trueUpdates, falseUpdates): unknown;
   (predicate: Predicate, trueUpdates, falseUpdates): (unknown) => unknown;
 }

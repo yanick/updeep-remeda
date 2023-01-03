@@ -1,7 +1,7 @@
 export declare const omitted: () => Readonly<{
     __omitted: boolean;
 }>;
-interface Update {
+export interface Update {
     (object: any, func: any): any;
     (func: any): (object: any) => any;
 }

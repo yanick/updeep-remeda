@@ -20,13 +20,13 @@
     "declarative"
   ],
   "source": "./src/index.ts",
-  "main": "./commonjs/index.cjs",
+  "main": "./commonjs/index.js",
   "types": "./esm/index.d.ts",
      "exports": {
         ".": {
             "types": "./esm/index.d.ts",
             "import": "./esm/index.js",
-            "require": "./commonjs/index.cjs"
+            "require": "./commonjs/index.js"
         }
     }, 
   "license": "MIT",

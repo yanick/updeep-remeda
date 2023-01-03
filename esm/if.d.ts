@@ -1,4 +1,4 @@
-interface If {
+export interface If {
     (object: any, predicate: any, trueUpdates: any): unknown;
     (predicate: any, trueUpdates: any): (unknown: any) => unknown;
 }

@@ -5,14 +5,17 @@ import ifElse from "./ifElse.js";
 import update, { omitted } from "./update.js";
 import updateIn from "./updateIn.js";
 import constant from "./constant.js";
-const u = update;
-u.constant = constant;
-u.if = _if;
-u.ifElse = ifElse;
-u.is = is;
-u.freeze = freeze;
-u.update = update;
-u.updateIn = updateIn;
-u.omitted = omitted;
-export default u;
+const functions = {
+    constant,
+    if: _if,
+    ifElse,
+    is,
+    freeze,
+    update,
+    updateIn,
+    omitted,
+};
+const merged = update;
+Object.entries(functions).forEach(([k, v]) => (merged[k] = v));
+export default merged;
 //# sourceMappingURL=index.js.map

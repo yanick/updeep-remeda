@@ -6,15 +6,19 @@ import update, { omitted } from "./update.js";
 import updateIn from "./updateIn.js";
 import constant from "./constant.js";
 
-const u: any = update;
+const functions = {
+  constant,
+  if: _if,
+  ifElse,
+  is,
+  freeze,
+  update,
+  updateIn,
+  omitted,
+};
 
-u.constant = constant;
-u.if = _if;
-u.ifElse = ifElse;
-u.is = is;
-u.freeze = freeze;
-u.update = update;
-u.updateIn = updateIn;
-u.omitted = omitted;
+const merged = update;
 
-export default u;
+Object.entries(functions).forEach(([k, v]) => (merged[k] = v));
+
+export default merged as typeof merged & typeof functions;

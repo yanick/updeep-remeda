@@ -1,4 +1,4 @@
-interface UpdateIn {
+export interface UpdateIn {
     (object: any, path: any, value: any): any;
     (path: any, value: any): (object: any) => any;
 }
