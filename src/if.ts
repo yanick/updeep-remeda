@@ -3,7 +3,7 @@ import { identity } from "remeda";
 import ifElse from "./ifElse.js";
 import wrap from "./wrap.js";
 
-interface If {
+export interface If {
   (object, predicate, trueUpdates): unknown;
   (predicate, trueUpdates): (unknown) => unknown;
 }

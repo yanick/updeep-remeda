@@ -1,5 +1,5 @@
 type Predicate = ((source: any) => boolean) | boolean;
-interface IfElse {
+export interface IfElse {
     (object: any, predicate: Predicate, trueUpdates: any, falseUpdates: any): unknown;
     (predicate: Predicate, trueUpdates: any, falseUpdates: any): (unknown: any) => unknown;
 }

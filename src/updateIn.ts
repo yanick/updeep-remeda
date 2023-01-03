@@ -26,7 +26,7 @@ function updateIn(object, path, value) {
   return update(object, updates);
 }
 
-interface UpdateIn {
+export interface UpdateIn {
   (object, path, value): any;
   (path, value): (object) => any;
 }

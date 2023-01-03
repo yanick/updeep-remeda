@@ -6,12 +6,12 @@ vars:
   GREETING: Hello, World!
 
 tasks:
+  test: vitest run
   build:
+    deps: [test]
     cmds:
-      - rm -fr types/ esm/ commonjs/
+      - rm -fr esm/
       - tsc -p tsconfig.json
-      - tsc -p tsconfig-cjs.json
-      - tsc -p tsconfig-types.json
   default:
     cmds:
       - echo "{{.GREETING}}"

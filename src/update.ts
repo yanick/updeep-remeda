@@ -102,7 +102,7 @@ function update(object, updates) {
   );
 }
 
-interface Update {
+export interface Update {
   (object, func): any;
   (func): (object) => any;
 }
