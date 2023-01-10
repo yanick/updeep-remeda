@@ -12,4 +12,4 @@ declare the updates you would like to make and it will take care of the rest. It
 will recursively return the same instance if no changes have been made, making
 it ideal for using reference equality checks to detect changes.
 
-Full documentation can be found at [https://yanick.github.com/updeep-remeda/index.html](https://yanick.github.com/updeep-remeda/index.html).
+Full documentation can be found at [https://yanick.github.io/updeep-remeda/index.html](https://yanick.github.io/updeep-remeda/index.html).
