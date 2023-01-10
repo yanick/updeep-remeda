@@ -8,10 +8,9 @@
     "type": "git",
     "url": "https://git.babyl.ca/yanick/updeep-remeda"
   },
-  "author": "Aaron Jensen",
+  "authors": [ "Aaron Jensen", "Yanick Champoux" ],
   "files": [
-    "dist",
-    "types"
+    "esm"
   ],
   "keywords": [
     "immutable",
@@ -29,12 +28,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://git.babyl.ca/yanick/updeep-remeda/issues"
+    "url": "https://github.com/yanick/updeep-remeda/issues"
   },
   "scripts": {
-    "dtslint": "dtslint --localTs node_modules/typescript/lib types",
-    "eslint": "eslint --ext .js,.jsx,.ts,.tsx",
-    "lint": "yarn -s eslint . && yarn -s dtslint"
   },
   "dependencies": {
     "remeda": "^1.3.0"

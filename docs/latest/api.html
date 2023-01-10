@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+
+  <script>
+    const key = 'svelteness::color-scheme';
+    const scheme = localStorage[key];
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (scheme === 'dark' || (scheme !== 'light' && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout-d4f4ab95.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Info-eb9b7651.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-4894d21d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-79165f10.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control-f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-ac40f340.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/contexts-c54c563b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores-1c9d0b64.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-82ef414d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-32f74dae.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/latest/api/_page.md-bd91dac8.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Info-8cb253a1.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<div class="kit-docs bg-gray-body min-h-full min-w-full h-full transition-transform duration-150 ease-out" style="font-family: var(--kd-font-family-sans, inherit); --kd--navbar-height: calc(var(--kd-navbar-height) + var(--kd-breadcrumbs-height));"><div class="fixed top-0 z-30 w-full flex-none transform-gpu transition-transform duration-150 ease-out supports-backdrop-blur:bg-white/60 bg-gray-200/95 backdrop-blur dark:bg-gray-800/60 translate-y-0" style="border-bottom: var(--kd-navbar-border-bottom);"><div class="flex w-full flex-col items-center justify-center mx-auto max-w-[var(--kd-navbar-max-width)] p-[var(--kd-navbar-padding)] h-[var(--kd--navbar-height)]"><div class="flex w-full items-center">
+        
+
+    <div class="flex-1"></div>
+
+    <div class="992:hidden -mr-2 flex items-center">
+
+      <div class="relative inline-block text-left not-prose"><button id="popover-button-1" type="button" class="inline-flex w-full justify-center rounded-md p-2 text-lg font-medium text-gray-soft hover:text-gray-inverse" aria-controls="popover-1" aria-expanded="false" aria-haspopup="true"><svg viewBox="0 0 24 24" width="30" height="30"><!-- HTML_TAG_START --><path fill="currentColor" d="M18 18v2H6v-2h12zm3-7v2H3v-2h18zm-3-7v2H6V4h12z"/><!-- HTML_TAG_END --></svg>
+          <span class="sr-only">Main navigation menu</span>
+        </button>
+
+  <div class="fixed top-0 left-0 bg-black/40 backdrop-blur-sm dark:bg-gray-700/80 transition-opacity duration-75 pointer-events-auto z-40 w-screen h-screen opacity-0 invisible"></div>
+
+  <div hidden></div>
+
+</div></div>
+
+    <div class="992:flex 992:items-center hidden"><nav><ul class="flex items-center space-x-8 text-lg font-medium"><li class="mt-4 first:mt-0 992:mt-0"><a class="p-1 text-gray-soft hover:text-gray-inverse" href="/latest/get-started">Get started</a></li><li class="mt-4 first:mt-0 992:mt-0"><a class="p-1 border-b hover:border-b-2 border-brand text-gray-inverse" href="/latest/api">API</a></li></ul></nav>
+
+      
+        
+
+      <div class="border-gray-divider ml-6 mr-2.5 h-7 w-2 border-l-[1.5px]"></div>
+
+      <div class="hidden 992:flex items-center">
+        
+        <div class="relative inline-block text-left not-prose"><button id="menu-button-1" type="button" class="inline-flex w-full justify-center rounded-md p-2 text-lg font-medium text-gray-soft hover:text-gray-inverse" aria-controls="menu-1" aria-expanded="false" aria-haspopup="true"><svg viewBox="0 0 24 24" width="1.2em" height="1.2em" class="h-6 w-6"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/><!-- HTML_TAG_END --></svg>
+    <span class="sr-only">Color Scheme</span>
+  </button>
+
+  <div hidden></div>
+
+</div></div></div></div>
+
+  <div class="border-gray-divider 992:hidden flex w-full items-center mt-4 pt-4 border-t"><button id="main-sidebar-button" type="button" class="text-gray-soft hover:text-gray-inverse inline-flex justify-center rounded-md p-2 text-sm font-medium" aria-controls="main-sidebar" aria-expanded="false" aria-haspopup="true"><span class="sr-only">Open main sidebar</span>
+                  <svg viewBox="0 0 24 24" width="28" height="28"><!-- HTML_TAG_START --><path fill="currentColor" d="M21 18v2H3v-2h18zM17.05 3.55L22 8.5l-4.95 4.95v-9.9zM12 11v2H3v-2h9zm0-7v2H3V4h9z"/><!-- HTML_TAG_END --></svg></button>
+
+              <ol class="text-md text-gray-soft flex items-center whitespace-nowrap leading-6 mt-px ml-2.5">
+                  <li class="truncate font-semibold text-slate-900 dark:text-slate-200">API</li></ol></div>
+
+          
+        </div></div>
+
+  <div class="mx-auto w-full flex flex-row min-h-full max-w-[var(--kd-content-max-width)] pt-[var(--kd--navbar-height)] z-20"><aside id="main-sidebar" class="sidebar self-start fixed top-0 left-0 transform bg-gray-body z-50 border-gray-divider border-r -translate-x-full transform transition-transform duration-200 ease-out will-change-transform max-h-screen min-h-screen min-w-[var(--kd-sidebar-min-width)] max-w-[var(--kd-sidebar-max-width)] 992:translate-x-0 922:block 992:sticky 992:z-0 overflow-y-auto p-[var(--kd-sidebar-padding)] 992:top-[var(--kd--navbar-height)] 992:min-h-[calc(100vh-var(--kd--navbar-height))] 992:max-h-[calc(100vh-var(--kd--navbar-height))]" role="dialog" aria-modal="true" style=""><div class="992:hidden sticky top-0 left-0 flex items-center"><div class="flex-1"></div>
+    <button class="text-gray-soft hover:text-gray-inverse p-4 -mx-6 pointer-events-none"><svg viewBox="0 0 24 24" width="24" height="24"><!-- HTML_TAG_START --><path fill="currentColor" d="m12 10.586l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.414 1.414l-4.95-4.95l-4.95 4.95l-1.414-1.414l4.95-4.95l-4.95-4.95L7.05 5.636z"/><!-- HTML_TAG_END --></svg>
+      <span class="sr-only">Close sidebar</span></button></div>
+
+  <nav class="992:px-1">
+
+    
+
+    <ul class="mt-8 pb-28 992:pb-0">
+        <li class="992:mt-10 mt-12 first:mt-0"><h5 class="text-gray-strong 992:mb-3 mb-8 text-lg font-semibold">
+            </h5>
+          <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/latest/get-started" style="">
+                  Get started
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 text-brand font-semibold" href="/latest/api" style="border-color: var(--kd-sidebar-border-active);">
+                  API
+                  </a>
+              </li></ul>
+        </li></ul>
+
+    
+        </nav></aside>
+
+<div class="992:hidden z-40"><div class="fixed top-0 left-0 bg-black/40 backdrop-blur-sm dark:bg-gray-700/80 transition-opacity duration-75 pointer-events-auto z-40 w-screen h-screen opacity-0 invisible"></div></div>
+
+    <main class="w-full overflow-x-hidden 992:min-h-[calc(100vh-var(--kd--navbar-height))] min-h-[calc(100vh-var(--kd--navbar-height))] px-8 992:px-16 pt-8" style="max-width: var(--kd-main-max-width, var(--kd-article-max-width));">
+
+      <article class="markdown prose dark:prose-invert z-10 max-w-[var(--kd-article-max-width)]">
+
+          <h1>API</h1>
+<div class="svelte-ns3bhs"><h4 class="svelte-ns3bhs">💡 Info</h4>
+
+<p>All functions are curried, Remeda-style, so if you see <code>f(dataIn, ...others)</code>, it can be called with either <code>f(dataIn, ...others)</code> or <code>f(...others)(dataIn)</code>.</p>
+
+</div>
+<h2 id="importing" tabindex="-1">
+<a class="header-anchor" href="#importing" aria-hidden="true">#</a> Importing</h2>
+<p><code>updeep-remeda</code> exports a default function that is an alias to <code>u.update</code> and
+has all the other functions available as props.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-text ext-text" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: undefined">import u from &#39;@yanick/updeep-remeda&#39;;</span></span>
+<span class="line"><span style="color: undefined"></span></span>
+<span class="line"><span style="color: undefined">const foo = u({a:1}, { a: x =&gt; x + 1 });</span></span>
+<span class="line"><span style="color: undefined"></span></span>
+<span class="line"><span style="color: undefined">const bar = u.updateIn({ a: { b: 2 } }, &#39;a.b&#39;, 3 );</span></span>
+<span class="line"><span style="color: undefined"></span></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><p>Or you can import the functions piecemeal:</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-text ext-text" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: undefined">import { updateIn, omit } from &#39;@yanick/updeep-remeda&#39;;</span></span>
+<span class="line"><span style="color: undefined"></span></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="u-datain-updates" tabindex="-1">
+<a class="header-anchor" href="#u-datain-updates" aria-hidden="true">#</a> <code>u(dataIn, updates)</code></h2>
+<h2 id="u-update-datain-updates" tabindex="-1">
+<a class="header-anchor" href="#u-update-datain-updates" aria-hidden="true">#</a> <code>u.update(dataIn, updates)</code></h2>
+<p>Update as many values as you want, as deeply as you want. The <code>updates</code> parameter can either be an object, a function, or a value. Everything returned from <code>u</code> is frozen recursively.</p>
+<p>If <code>updates</code> is an object, for each key/value, it will apply the updates specified in the value to <code>object[key]</code>.</p>
+<p>If <code>updates</code> is a function, it will call the function with <code>object</code> and return the value.</p>
+<p>If <code>updates</code> is a value, it will return that value.</p>
+<p>Sometimes, you may want to set an entire object to a property, or a function. In that case, you&#39;ll need to use a function to return that value, otherwise it would be interpreted as an update. Ex. <code>function() { return { a: 0 }; }</code>.</p>
+<p>Also available at <code>u.update(...)</code>.</p>
+<h3 id="simple-update" tabindex="-1">
+<a class="header-anchor" href="#simple-update" aria-hidden="true">#</a> Simple update</h3>
+<p>Object properties:</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> person </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">first</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Jane</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">last</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">West</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #89DDFF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(person</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">first</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Susan</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">first</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Susan</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">last</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">West</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><p>Array elements:</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> scoreboard </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #F78C6C">12</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">28</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(scoreboard</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">1</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">36</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #F78C6C">12</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">36</span><span style="color: #A6ACCD">] </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="multiple-updates" tabindex="-1">
+<a class="header-anchor" href="#multiple-updates" aria-hidden="true">#</a> Multiple updates</h3>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> person </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">first</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Mike</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">last</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Smith</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #F78C6C">12</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">28</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(person</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">last</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Jones</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">1</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">36</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">first</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Mike</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">last</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Jones</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #F78C6C">12</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">36</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="use-a-function" tabindex="-1">
+<a class="header-anchor" href="#use-a-function" aria-hidden="true">#</a> Use a function</h3>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> increment </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">(</span><span style="color: #A6ACCD">i</span><span style="color: #89DDFF">)</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">=&gt;</span><span style="color: #A6ACCD"> i </span><span style="color: #89DDFF">+</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">1</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">var</span><span style="color: #A6ACCD"> scoreboard </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">team1</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">0</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">team2</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">0</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #89DDFF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(scoreboard</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">team2</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> increment </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">scores</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">team1</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">0</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">team2</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">1</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="array-manipulation" tabindex="-1">
+<a class="header-anchor" href="#array-manipulation" aria-hidden="true">#</a> Array Manipulation</h3>
+<p>Non-trivial array manipulations, such as element removal/insertion/sorting, can be implemented with functions. Because there are so many possible manipulations, we don&#39;t provide any helpers and leave this up to you. Simply ensure your function is pure and does not mutate its arguments.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">function</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">addTodo</span><span style="color: #89DDFF">(</span><span style="color: #A6ACCD">todos</span><span style="color: #89DDFF">)</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #F07178">  </span><span style="color: #89DDFF">return</span><span style="color: #F07178"> []</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">concat</span><span style="color: #F07178">(</span><span style="color: #A6ACCD">todos</span><span style="color: #89DDFF">,</span><span style="color: #F07178"> [</span><span style="color: #89DDFF">{</span><span style="color: #F07178"> done</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #FF9CAC">false</span><span style="color: #F07178"> </span><span style="color: #89DDFF">}</span><span style="color: #F07178">])</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #89DDFF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> state </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> addTodo </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> state)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><p>Remeda is one of the many libraries providing good utility functions for
+such manipulations.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #89DDFF">import</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #F07178"> </span><span style="color: #A6ACCD">reject</span><span style="color: #89DDFF">,</span><span style="color: #F07178"> </span><span style="color: #A6ACCD">concat</span><span style="color: #89DDFF">,</span><span style="color: #F07178"> </span><span style="color: #A6ACCD">prop</span><span style="color: #F07178"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">from</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">remeda</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">let</span><span style="color: #A6ACCD"> state </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">true</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #676E95">// add a new todo</span></span>
+<span class="line"><span style="color: #A6ACCD">state </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(state</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">concat</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">) </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(state)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">true</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #676E95">// remove all done todos</span></span>
+<span class="line"><span style="color: #A6ACCD">state </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(state</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">reject</span><span style="color: #A6ACCD">(</span><span style="color: #82AAFF">prop</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">done</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">)) </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(state)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">] </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="default-input-data" tabindex="-1">
+<a class="header-anchor" href="#default-input-data" aria-hidden="true">#</a> Default input data</h3>
+<p>When the input data is null or undefined, updeep uses a empty plain object.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">null,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">foo</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">bar</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">foo</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">bar</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="partial-application" tabindex="-1">
+<a class="header-anchor" href="#partial-application" aria-hidden="true">#</a> Partial application</h3>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> inc </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">(</span><span style="color: #A6ACCD">i</span><span style="color: #89DDFF">)</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">=&gt;</span><span style="color: #A6ACCD"> i </span><span style="color: #89DDFF">+</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">1</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> addOneYear </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> increment </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">addOneYear</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Shannon Barnes</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">62</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Shannon Barnes</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">63</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="u-freeze-datain" tabindex="-1">
+<a class="header-anchor" href="#u-freeze-datain" aria-hidden="true">#</a> <code>u.freeze(dataIn)</code></h2>
+<p>Freeze your initial state to protect against mutations. Only performs the freezing in development, and returns the original object unchanged in production.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> state </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">freeze</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">someKey</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Some Value</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #A6ACCD">state</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">someKey </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Mutate</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">;</span><span style="color: #A6ACCD"> </span><span style="color: #676E95">// ERROR in development</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="u-updatein-datain-path-value" tabindex="-1">
+<a class="header-anchor" href="#u-updatein-datain-path-value" aria-hidden="true">#</a> <code>u.updateIn(dataIn, path, value)</code></h2>
+<p>Update a single value with a simple string or array path. Can be use to update nested objects, arrays, or a combination. Can also be used to update every element of a nested array with <code>'*'</code>.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">updateIn</span><span style="color: #A6ACCD">(</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">bunny</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">color</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">black</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">bunny.color</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">brown</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">bunny</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">color</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">brown</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">updateIn</span><span style="color: #A6ACCD">(</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">0.1.color</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">brown</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #A6ACCD">)([[</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">color</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">blue</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">color</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">red</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> []])</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">([[</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">color</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">blue</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">color</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">brown</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> []])</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> incr </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">(</span><span style="color: #A6ACCD">i</span><span style="color: #89DDFF">)</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">=&gt;</span><span style="color: #A6ACCD"> i </span><span style="color: #89DDFF">+</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">1</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">updateIn</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">bunny.age</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> incr)(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">bunny</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">2</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">bunny</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">3</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">pets</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">bunny</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">2</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">] </span><span style="color: #89DDFF">}</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">pets</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">updateIn</span><span style="color: #A6ACCD">([</span><span style="color: #F78C6C">0</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">bunny</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">age</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">3</span><span style="color: #A6ACCD">) </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">pets</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">bunny</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">3</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">] </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">updateIn</span><span style="color: #A6ACCD">(</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">todos.*.done</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #FF9CAC">true</span></span>
+<span class="line"><span style="color: #A6ACCD">)(</span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">false</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">todos</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">true</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">done</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">true</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">]</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="u-constant-datain" tabindex="-1">
+<a class="header-anchor" href="#u-constant-datain" aria-hidden="true">#</a> <code>u.constant(dataIn)</code></h2>
+<p>Sometimes, you want to replace an object outright rather than merging it.
+You&#39;ll need to use a function that returns the new object.
+<code>u.constant</code> creates that function for you.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> user </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Mitch</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">favorites</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">band</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Nirvana</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">movie</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">The Matrix</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #89DDFF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> newFavorites </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">band</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Coldplay</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #89DDFF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(user</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">favorites</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">constant</span><span style="color: #A6ACCD">(newFavorites) </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Mitch</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">favorites</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">band</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Coldplay</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> alwaysFour </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">constant</span><span style="color: #A6ACCD">(</span><span style="color: #F78C6C">4</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(</span><span style="color: #82AAFF">alwaysFour</span><span style="color: #A6ACCD">(</span><span style="color: #F78C6C">32</span><span style="color: #A6ACCD">))</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #F78C6C">4</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="u-if-datain-predicate-updates" tabindex="-1">
+<a class="header-anchor" href="#u-if-datain-predicate-updates" aria-hidden="true">#</a> <code>u.if(dataIn, predicate, updates)</code></h2>
+<p>Apply <code>updates</code> if <code>predicate</code> is truthy, or if <code>predicate</code> is a function.
+It evaluates to truthy when called with <code>object</code>.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C792EA">function</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">isEven</span><span style="color: #89DDFF">(</span><span style="color: #A6ACCD">x</span><span style="color: #89DDFF">)</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #F07178">  </span><span style="color: #89DDFF">return</span><span style="color: #F07178"> </span><span style="color: #A6ACCD">x</span><span style="color: #F07178"> </span><span style="color: #89DDFF">%</span><span style="color: #F07178"> </span><span style="color: #F78C6C">2</span><span style="color: #F07178"> </span><span style="color: #89DDFF">===</span><span style="color: #F07178"> </span><span style="color: #F78C6C">0</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #89DDFF">}</span></span>
+<span class="line"><span style="color: #C792EA">function</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">increment</span><span style="color: #89DDFF">(</span><span style="color: #A6ACCD">x</span><span style="color: #89DDFF">)</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #F07178">  </span><span style="color: #89DDFF">return</span><span style="color: #F07178"> </span><span style="color: #A6ACCD">x</span><span style="color: #F07178"> </span><span style="color: #89DDFF">+</span><span style="color: #F07178"> </span><span style="color: #F78C6C">1</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #89DDFF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> result </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">u</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">value</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">2</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">value</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">if</span><span style="color: #A6ACCD">(isEven</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> increment) </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #82AAFF">expect</span><span style="color: #A6ACCD">(result)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">to</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">eql</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">value</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">3</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="u-filter-arrayin-predicate" tabindex="-1">
+<a class="header-anchor" href="#u-filter-arrayin-predicate" aria-hidden="true">#</a> <code>u.filter(arrayIn, predicate)</code></h2>
+<h2 id="u-reject-arrayin-predicate" tabindex="-1">
+<a class="header-anchor" href="#u-reject-arrayin-predicate" aria-hidden="true">#</a> <code>u.reject(arrayIn, predicate)</code></h2>
+<h2 id="u-pickby-objectin-predicate" tabindex="-1">
+<a class="header-anchor" href="#u-pickby-objectin-predicate" aria-hidden="true">#</a> <code>u.pickBy(objectIn, predicate)</code></h2>
+<h2 id="u-omitby-objectin-predicate" tabindex="-1">
+<a class="header-anchor" href="#u-omitby-objectin-predicate" aria-hidden="true">#</a> <code>u.omitBy(objectIn, predicate)</code></h2>
+<h2 id="u-pick-objectin-keys" tabindex="-1">
+<a class="header-anchor" href="#u-pick-objectin-keys" aria-hidden="true">#</a> <code>u.pick(objectIn, keys)</code></h2>
+<h2 id="u-omit-objectin-keys" tabindex="-1">
+<a class="header-anchor" href="#u-omit-objectin-keys" aria-hidden="true">#</a> <code>u.omit(objectIn, keys)</code></h2>
+<p>Essentially the same as their Remeda counterparts. The difference being
+that if the transformation results in no change, the original object/array is
+returned.</p>
+<h2 id="u-matches-datain-condition" tabindex="-1">
+<a class="header-anchor" href="#u-matches-datain-condition" aria-hidden="true">#</a> <code>u.matches(dataIn, condition)</code></h2>
+<p>Do a deep comparison with <code>condition</code>, and returns
+<code>true</code> if the <code>dataIn</code> object matches.</p>
+<p>Scalar values are verified for equality (i.e., <code>{foo: 12}</code>
+will verify that the object has the prop <code>foo</code> set to <code>12</code>), and
+functions are going to be invoked with the object value of the object and
+expected to return <code>true</code> upon matching.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-javascript ext-js" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #A6ACCD">u</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">matches</span><span style="color: #A6ACCD">(</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Bob</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">32</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">address</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">...</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #F07178">name</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Bob</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #82AAFF">age</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">(</span><span style="color: #A6ACCD">age</span><span style="color: #89DDFF">)</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">=&gt;</span><span style="color: #A6ACCD"> age </span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">30</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">}</span></span>
+<span class="line"><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">;</span><span style="color: #A6ACCD"> </span><span style="color: #676E95">// true</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div></article>
+
+      <hr class="border-gray-divider mt-20">
+
+        <div class="992:text-xl flex items-center pt-12 pb-20 text-lg font-semibold text-gray-300"><div class="mb-4 flex flex-col items-start"><span class="text-gray-inverse ml-3 mb-4 inline-block">Previous</span>
+              
+  <a class="group transform-gpu text-lg font-medium transition-transform hover:scale-105 hover:text-gray-inverse" href="/latest/get-started" data-sveltekit-prefetch><span class="opacity-0 transition-opacity duration-100 group-hover:visible group-hover:opacity-100 inline-block">&lt;-</span>
+    <span class="inline-block transform transition-transform duration-100 group-hover:translate-x-0 -translate-x-3 ">Get started</span>
+    </a></div>
+
+          </div>
+
+      </main>
+
+    <div class="992:flex-1"></div>
+
+    <div class="on-this-page pt-8 pb-8 hidden overflow-auto min-w-[160px] sticky right-4 pr-4 1440:right-6 1440:pr-2 1280:block pl-0.5 top-[var(--kd--navbar-height)] max-h-[calc(100vh-var(--kd--navbar-height))]" style=""><h5 class="font-semibold w-full text-left text-gray-inverse text-lg">On this page</h5>
+    <ul class="space-y-4 mt-4"><li class="text-gray-soft hover:text-gray-inverse"><a href="#importing">Importing</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-datain-updates">u(dataIn, updates)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-update-datain-updates">u.update(dataIn, updates)</a></li>
+        <ul class="space-y-3"><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg viewBox="0 0 24 24" width="20" height="20" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#simple-update">Simple update</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg viewBox="0 0 24 24" width="20" height="20" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#multiple-updates">Multiple updates</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg viewBox="0 0 24 24" width="20" height="20" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#use-a-function">Use a function</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg viewBox="0 0 24 24" width="20" height="20" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#array-manipulation">Array Manipulation</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg viewBox="0 0 24 24" width="20" height="20" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#default-input-data">Default input data</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg viewBox="0 0 24 24" width="20" height="20" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#partial-application">Partial application</a>
+              </li>
+          </ul><li class="text-gray-soft hover:text-gray-inverse"><a href="#u-freeze-datain">u.freeze(dataIn)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-updatein-datain-path-value">u.updateIn(dataIn, path, value)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-constant-datain">u.constant(dataIn)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-if-datain-predicate-updates">u.if(dataIn, predicate, updates)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-filter-arrayin-predicate">u.filter(arrayIn, predicate)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-reject-arrayin-predicate">u.reject(arrayIn, predicate)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-pickby-objectin-predicate">u.pickBy(objectIn, predicate)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-omitby-objectin-predicate">u.omitBy(objectIn, predicate)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-pick-objectin-keys">u.pick(objectIn, keys)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-omit-objectin-keys">u.omit(objectIn, keys)</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#u-matches-datain-condition">u.matches(dataIn, condition)</a></li>
+        </ul></div></div></div>
+
+
+		<script type="module" data-sveltekit-hydrate="1ts6po4">
+			import { start } from "../_app/immutable/start-4894d21d.js";
+
+			start({
+				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1ts6po4"]').parentNode,
+				version: "1673374967075",
+				hydrate: {
+					node_ids: [0, 4],
+					data: [null,null],
+					form: null
+				}
+			});
+		</script>
+	<script type="application/json" data-sveltekit-fetched data-url="/kit-docs/latest_api.meta">{"status":200,"statusText":"","headers":{},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Importing\",\"slug\":\"importing\",\"children\":[]},{\"level\":2,\"title\":\"u(dataIn, updates)\",\"slug\":\"u-datain-updates\",\"children\":[]},{\"level\":2,\"title\":\"u.update(dataIn, updates)\",\"slug\":\"u-update-datain-updates\",\"children\":[{\"level\":3,\"title\":\"Simple update\",\"slug\":\"simple-update\",\"children\":[]},{\"level\":3,\"title\":\"Multiple updates\",\"slug\":\"multiple-updates\",\"children\":[]},{\"level\":3,\"title\":\"Use a function\",\"slug\":\"use-a-function\",\"children\":[]},{\"level\":3,\"title\":\"Array Manipulation\",\"slug\":\"array-manipulation\",\"children\":[]},{\"level\":3,\"title\":\"Default input data\",\"slug\":\"default-input-data\",\"children\":[]},{\"level\":3,\"title\":\"Partial application\",\"slug\":\"partial-application\",\"children\":[]}]},{\"level\":2,\"title\":\"u.freeze(dataIn)\",\"slug\":\"u-freeze-datain\",\"children\":[]},{\"level\":2,\"title\":\"u.updateIn(dataIn, path, value)\",\"slug\":\"u-updatein-datain-path-value\",\"children\":[]},{\"level\":2,\"title\":\"u.constant(dataIn)\",\"slug\":\"u-constant-datain\",\"children\":[]},{\"level\":2,\"title\":\"u.if(dataIn, predicate, updates)\",\"slug\":\"u-if-datain-predicate-updates\",\"children\":[]},{\"level\":2,\"title\":\"u.filter(arrayIn, predicate)\",\"slug\":\"u-filter-arrayin-predicate\",\"children\":[]},{\"level\":2,\"title\":\"u.reject(arrayIn, predicate)\",\"slug\":\"u-reject-arrayin-predicate\",\"children\":[]},{\"level\":2,\"title\":\"u.pickBy(objectIn, predicate)\",\"slug\":\"u-pickby-objectin-predicate\",\"children\":[]},{\"level\":2,\"title\":\"u.omitBy(objectIn, predicate)\",\"slug\":\"u-omitby-objectin-predicate\",\"children\":[]},{\"level\":2,\"title\":\"u.pick(objectIn, keys)\",\"slug\":\"u-pick-objectin-keys\",\"children\":[]},{\"level\":2,\"title\":\"u.omit(objectIn, keys)\",\"slug\":\"u-omit-objectin-keys\",\"children\":[]},{\"level\":2,\"title\":\"u.matches(dataIn, condition)\",\"slug\":\"u-matches-datain-condition\",\"children\":[]}],\"title\":\"API\",\"frontmatter\":{\"title\":\"API\"},\"lastUpdated\":1673371541420}"}</script></div>
+	</body>
+</html>

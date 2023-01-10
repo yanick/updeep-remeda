@@ -18,7 +18,7 @@
 		"@iconify-json/ri": "^1.1.4",
 		"@rollup/pluginutils": "^5.0.2",
 		"@sveltejs/adapter-static": "^1.0.1",
-		"@svelteness/kit-docs": "link:/home/yanick/work/javascript/kit-docs/packages/kit-docs",
+		"@svelteness/kit-docs": "link:../../kit-docs/packages/kit-docs",
 		"globby": "^13.1.3",
 		"gray-matter": "^4.0.3",
 		"kit-docs-workspace": "github:svelteness/kit-docs",
