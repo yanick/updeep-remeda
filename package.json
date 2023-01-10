@@ -21,13 +21,12 @@
   ],
   "source": "./src/index.ts",
   "types": "./esm/index.d.ts",
-     "exports": {
-        ".": {
-            "types": "./esm/index.d.ts",
-            "import": "./esm/index.js",
-            "require": "./commonjs/index.js"
-        }
-    }, 
+  "exports": {
+    ".": {
+      "types": "./esm/index.d.ts",
+      "import": "./esm/index.js"
+    }
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://git.babyl.ca/yanick/updeep-remeda/issues"
@@ -45,7 +44,6 @@
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "@vitest/ui": "^0.26.3",
-    "benchmark": "*",
     "dtslint": "*",
     "eslint": "*",
     "eslint-config-prettier": "*",
@@ -53,7 +51,9 @@
     "eslint-plugin-import": "*",
     "eslint-plugin-prettier": "*",
     "prettier": "*",
+    "typedoc": "^0.23.23",
     "typescript": "^4.9.4",
+    "updeep": "^1.2.1",
     "vitest": "^0.26.3"
   }
 }
