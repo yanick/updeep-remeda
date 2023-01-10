@@ -1,10 +1,10 @@
 import wrap from "./wrap.js";
 import constant from "./constant.js";
 
-import { omitBy, isObject } from "remeda";
+import { omitBy, isObject, merge } from "remeda";
 
-const innerOmitted = { __omitted: true };
-export const omitted = constant(innerOmitted);
+const innerOmitted = { __skip: true };
+export const skip = constant(innerOmitted);
 
 function isEmpty(object) {
   return !Object.keys(object).length;
@@ -86,6 +86,12 @@ function update(object, updates) {
 
   const resolvedUpdates = resolveUpdates(updates, defaultedObject);
 
+  Object.entries(resolvedUpdates).forEach(([key, value]) => {
+    if (value === innerOmitted) {
+      if (!defaultedObject.hasOwnProperty(key)) delete resolvedUpdates[key];
+    }
+  });
+
   if (isEmpty(resolvedUpdates)) {
     return defaultedObject;
   }
@@ -97,7 +103,7 @@ function update(object, updates) {
   }
 
   return omitBy(
-    { ...defaultedObject, ...resolvedUpdates },
+    merge(defaultedObject, resolvedUpdates),
     (value) => value === innerOmitted
   );
 }
