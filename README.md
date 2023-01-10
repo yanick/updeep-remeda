@@ -5,7 +5,7 @@
 
 ## About
 
-This is a fork of the main [updeep](github.com/substantial/updeep) package.
+This is a fork of the main [updeep](https://github.com/substantial/updeep) package.
 
 updeep makes updating deeply nested objects/arrays painless by allowing you to
 declare the updates you would like to make and it will take care of the rest. It
