@@ -1,7 +1,3 @@
----
-title: Get Started
----
-
 # updeep-remeda
 
 > Easily update nested frozen objects and arrays in a declarative and immutable
@@ -9,14 +5,15 @@ title: Get Started
 
 ## About
 
-:::info
+<div class="info">
+<h4>💡 Info</h4>
 
 This is a fork of the main updeep package. For ease of reading &mdash; not to
 mention ease of shamelessly lifting large pieces of the original
 documentation &mdash; in this documentation all mentions of `updeep` refers to this
 fork.
 
-:::
+</div>
 
 updeep makes updating deeply nested objects/arrays painless by allowing you to
 declare the updates you would like to make and it will take care of the rest. It
@@ -32,12 +29,12 @@ This fork of updeep requires Remeda, but works very well with any other utility 
 
 ## Differences with the original Updeep
 
-* Under the hood, the use of lodash has
-been replaced by Remeda (for better type support and tree-shaking abilities).
+- Under the hood, the use of lodash has
+  been replaced by Remeda (for better type support and tree-shaking abilities).
 
-* The codebase has been ported to TypeScript (mostly for the lulz).
+- The codebase has been ported to TypeScript (mostly for the lulz).
 
-* The order of parameters in the non-curryied invocation of functions has been modified. In the original updeep the input object is the last parameter, whereas here it's the first.
+- The order of parameters in the non-curryied invocation of functions has been modified. In the original updeep the input object is the last parameter, whereas here it's the first.
 
 ```js
 // original updeep
@@ -51,10 +48,10 @@ dataOut = u(dataIn, { c: 3 }); // simple call
 dataOut = u({ c: 3 })(dataIn); // curried
 ```
 
-* `withDefault` has been removed as the behavior can be implemented using
+- `withDefault` has been removed as the behavior can be implemented using
   Remeda's `pipe`, or a simple `??`.
 
-* `u.omitted` has been renamed `u.skip`.
+- `u.omitted` has been renamed `u.skip`.
 
 ## Installation
 

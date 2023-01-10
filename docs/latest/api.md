@@ -1,14 +1,12 @@
----
-title: API
----
 
 # API 
 
-:::info
+<div class="info">
+<h4>💡 Info</h4>
 
 All functions are curried, Remeda-style, so if you see `f(dataIn, ...others)`, it can be called with either `f(dataIn, ...others)` or `f(...others)(dataIn)`.
 
-:::
+</div>
 
 ## Importing
 

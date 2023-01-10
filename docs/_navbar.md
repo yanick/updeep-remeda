@@ -1,2 +1,2 @@
-- [Getting started](.)
-- [API](api)
+- [Getting started](/)
+- [API](/api)

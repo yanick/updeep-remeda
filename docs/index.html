@@ -10,6 +10,21 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
     <link rel="stylesheet" href="vendor/themes/vue.css" />
+<style>
+div.info {
+    background: lightgreen;
+    margin: 0px 2em;
+    padding: 0.25em 1em;
+    font-weight: normal;
+    border-radius: 1em;
+    color: black;
+}
+
+
+div.info h4 {
+    margin: 0px;
+}
+</style>
   </head>
   <body>
     <div id="app"></div>
@@ -21,8 +36,25 @@
         alias: {
           "/api": "/latest/api",
         },
+        namespaces: [
+          {
+            id: "version",
+            values: ["latest"],
+            optional: true,
+            default: "latest",
+            selector: "#version-selector",
+          },
+        ],
+        name:
+          '<a id="home-link" class="app-name-link" data-nosearch href="/">updeep-remeda</a> ' +
+          '<select id="version-selector" name="version">' +
+          '<option value="latest">latest</value>' +
+          "</select>",
+        // disable automatic linking to avoid navigating when clicking on select
+        nameLink: false,
       };
     </script>
+    <script src="docsify-namespaced.js"></script>
     <script src="vendor/docsify.js"></script>
   </body>
 </html>
