@@ -6,6 +6,11 @@ vars:
   GREETING: Hello, World!
 
 tasks:
+  changelog:
+    sources: [./CHANGELOG.yml]
+    generates: [./CHANGELOG.md]
+    cmds:
+      - changelord print > CHANGELOG.md
   test: vitest run
   build:
     deps: [test]
