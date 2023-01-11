@@ -4,6 +4,8 @@ version: "3"
 
 vars:
   GREETING: Hello, World!
+  VERSION:
+    sh: cat package.json | jq -r .version
 
 tasks:
   changelog:
@@ -30,6 +32,14 @@ tasks:
         msg: stuff not commited
     cmds:
       - npm pack
+
+  publish:
+    deps: [prepRelease]
+    cmds:
+      - "git tag v{{.VERSION}}"
+      - npm publish --access public
+      - git push
+      - git push --tags
 
   default:
     cmds:
