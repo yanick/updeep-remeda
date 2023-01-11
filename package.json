@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "updeep-remeda",
+  "name": "@yanick/updeep-remeda",
   "version": "2.0.0",
   "description": "Easily update nested frozen objects and arrays in a declarative and immutable manner.",
   "homepage": "https://git.babyl.ca/yanick/updeep-remeda",

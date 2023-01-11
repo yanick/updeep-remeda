@@ -12,11 +12,25 @@ tasks:
     cmds:
       - changelord print > CHANGELOG.md
   test: vitest run
+
   build:
+    sources: ["src/**"]
+    generates: ["esm/**"]
     deps: [test]
     cmds:
       - rm -fr esm/
       - tsc -p tsconfig.json
+
+  prepRelease:
+    deps: [changelog, build]
+    preconditions:
+      - sh: git branch | grep '* main'
+        msg: not on main
+      - sh: git is-clean
+        msg: stuff not commited
+    cmds:
+      - npm pack
+
   default:
     cmds:
       - echo "{{.GREETING}}"
