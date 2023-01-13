@@ -154,14 +154,14 @@ describe("u.skip", () => {
     });
 
     it("doesn't change the obj if nothing is omitted", () => {
-        const orig = { a: 1 }
-        const result = u(orig, { b: u.skip })
-        expect(result).to.be.equal(orig)
-    })
+        const orig = { a: 1 };
+        const result = u(orig, { b: u.skip });
+        expect(result).to.be.equal(orig);
+    });
 
     it("doesn't change the array if nothing is omitted", () => {
-        const orig = [1, 2, 3]
-        const result = u({ 4: u.skip })(orig)
-        expect(result).to.be.equal(orig)
-    })
+        const orig = [1, 2, 3];
+        const result = u({ 4: u.skip })(orig);
+        expect(result).to.be.equal(orig);
+    });
 });

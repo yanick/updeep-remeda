@@ -6,10 +6,16 @@ project:
   ticket_url: ~
   with_stats: true
 releases:
+  - version: v2.1.0
+    date: 2023-00-13
+    changes:
+      - desc: add function 'matches'
+      - desc: "code churn: 7 files changed, 66 insertions(+), 174 deletions(-)"
+        type: stats
   - version: v2.0.0
     date: ~
     changes:
-      - desc: Fork from the [mothership](github.com/substantial/updeep), v1.2.1
+      - desc: "Fork from the [mothership](github.com/substantial/updeep), v1.2.1"
 change_types:
   - keywords:
       - feat
