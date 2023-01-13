@@ -11,6 +11,7 @@ import pick from "./pick.js";
 import pickBy from "./pickBy.js";
 import filter from "./filter.js";
 import reject from "./reject.js";
+import matches from "./matches.js";
 
 const functions = {
   filter,
@@ -27,6 +28,7 @@ const functions = {
   update,
   updateIn,
   skip,
+  matches,
 };
 
 export {
@@ -44,11 +46,11 @@ export {
   update,
   updateIn,
   skip,
-}
+  matches,
+};
 
 const merged = update;
 
 Object.entries(functions).forEach(([k, v]) => (merged[k] = v));
 
 export default merged as typeof merged & typeof functions;
-
