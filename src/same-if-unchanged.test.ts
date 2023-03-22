@@ -15,7 +15,7 @@ describe("update", () => {
     expect(result).toBe(orig);
   });
 
-  test.only("with u.skip", () => {
+  test("with u.skip", () => {
     const orig = { a: 1 };
     const result = u(orig, { b: u.skip });
     expect(result).toBe(orig);
