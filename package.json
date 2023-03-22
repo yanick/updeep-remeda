@@ -3,10 +3,10 @@
   "name": "@yanick/updeep-remeda",
   "version": "2.1.1",
   "description": "Easily update nested frozen objects and arrays in a declarative and immutable manner.",
-  "homepage": "https://git.babyl.ca/yanick/updeep-remeda",
+  "homepage": "https://yanick.github.io/updeep-remeda",
   "repository": {
     "type": "git",
-    "url": "https://git.babyl.ca/yanick/updeep-remeda"
+    "url": "https://github.com/yanick/updeep-remeda"
   },
   "authors": [ "Aaron Jensen", "Yanick Champoux" ],
   "files": [
