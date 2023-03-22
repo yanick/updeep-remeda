@@ -13,6 +13,7 @@ tasks:
     generates: [./CHANGELOG.md]
     cmds:
       - changelord print > CHANGELOG.md
+
   test: vitest run
 
   build:
