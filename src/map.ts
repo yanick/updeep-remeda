@@ -21,7 +21,7 @@ function map(object, iteratee) {
   return equal ? object : newObject;
 }
 
-interface Map {
+export interface Map {
   (object, iteratee): any;
   (iteratee): (object) => any;
 }

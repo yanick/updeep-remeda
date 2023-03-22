@@ -12,23 +12,25 @@ import pickBy from "./pickBy.js";
 import filter from "./filter.js";
 import reject from "./reject.js";
 import matches from "./matches.js";
+import myMap from "./map.js";
 
 const functions = {
+  constant,
   filter,
-  reject,
-  pickBy,
-  pick,
+  freeze,
+  ifElse,
+  if: _if,
+  is,
+  map: myMap,
+  matches,
   omit,
   omitBy,
-  constant,
-  if: _if,
-  ifElse,
-  is,
-  freeze,
+  pick,
+  pickBy,
+  reject,
+  skip,
   update,
   updateIn,
-  skip,
-  matches,
 };
 
 export {
@@ -47,6 +49,7 @@ export {
   updateIn,
   skip,
   matches,
+  myMap as map,
 };
 
 const merged = update;
