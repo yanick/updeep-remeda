@@ -4,6 +4,15 @@
 
 
 
+## v2.1.2, 2023-03-10
+
+  * check for array deep equality
+
+### Statistics
+
+  * code churn: 6 files changed, 50 insertions(+), 11 deletions(-)
+
+
 ## v2.1.1, 2023-02-22
 
   * add map to the exports
