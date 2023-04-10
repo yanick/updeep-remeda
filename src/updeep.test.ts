@@ -169,3 +169,14 @@ describe("u.skip", () => {
 test("has map", () => {
   expect(u).toHaveProperty("map");
 });
+
+test("deep equality", () => {
+  const orig = [1, 2, 3];
+
+  // no change? same structure
+  expect(u(orig, [1, 2, 3])).toBe(orig);
+
+  const deepOrig = [1, 2, [3, 4]];
+
+  expect(u(deepOrig, [1, 2, [3, 4]])).toBe(deepOrig);
+});

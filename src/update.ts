@@ -1,5 +1,6 @@
 import wrap from "./wrap.js";
 import constant from "./constant.js";
+import * as R from "remeda";
 
 import { omitBy, isObject, merge } from "remeda";
 
@@ -76,6 +77,8 @@ function update(object, updates) {
   if (typeof updates === "function") {
     return updates(object);
   }
+
+  if (Array.isArray(object) && R.equals(object, updates)) return object;
 
   if (!isPlainObject(updates)) {
     return updates;

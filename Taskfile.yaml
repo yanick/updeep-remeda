@@ -3,9 +3,12 @@
 version: "3"
 
 vars:
-  GREETING: Hello, World!
   VERSION:
     sh: cat package.json | jq -r .version
+  PARENT_BRANCH: main
+  FILE_DELTA:
+    sh: git diff-ls {{.PARENT_BRANCH}}
+  FIX: false
 
 tasks:
   changelog:
@@ -16,6 +19,24 @@ tasks:
 
   test: vitest run
 
+  prettier:
+    cmd: prettier {{if .FIX }}--write{{end}} {{ .FILE_DELTA | catLines | default "." }}
+
+  checkout-clean:
+    cmds:
+      - sh: git is-clean
+        msg: stuff not commited
+
+  integrate:
+    deps: [prettier, test, build]
+    cmds:
+      - echo {{ .FILE_DELTA | catLines }} | grep CHANGELOG.yml
+      - sh: git branch | grep '* {{.PARENT_BRANCH}}'
+        msg: not on target
+      - { task: checkout-clean }
+      - git checkout {{.PARENT_BRANCH}}
+      - git weld -
+
   build:
     sources: ["src/**"]
     generates: ["esm/**"]
@@ -25,7 +46,7 @@ tasks:
       - tsc -p tsconfig.json
 
   prepRelease:
-    deps: [changelog, build]
+    deps: [test, changelog, build]
     preconditions:
       - sh: git branch | grep '* main'
         msg: not on main
@@ -41,8 +62,3 @@ tasks:
       - npm publish --access public
       - git push
       - git push --tags
-
-  default:
-    cmds:
-      - echo "{{.GREETING}}"
-    silent: true
