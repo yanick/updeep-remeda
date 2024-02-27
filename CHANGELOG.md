@@ -1,5 +1,14 @@
 # Changelog for [updeep-remeda](https://github.com/yanick/updeep-remeda)
 
+## 2.3.1
+
+### Patch Changes
+
+- 2bb0372: actually make mapIf and mapIfElse accessible.
+- 7f0b147: don't include the tests in the package
+
+  But do include the TypeScript source, for the lulz
+
 ## v2.3.0, 2024-02-27
 
 ### Minor Changes
