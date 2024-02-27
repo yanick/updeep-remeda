@@ -7,7 +7,7 @@ vars:
     sh: cat package.json | jq -r .version
   PARENT_BRANCH: main
   FILE_DELTA:
-    sh: git diff-ls {{.PARENT_BRANCH}}
+    sh: git diff-ls --diff-filter=d {{.PARENT_BRANCH}}
   FIX: false
 
 tasks:
