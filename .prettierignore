@@ -4,3 +4,4 @@ dist
 coverage
 contrib/add_change
 .prettierignore
+.npmignore
