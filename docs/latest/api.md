@@ -1,5 +1,4 @@
-
-# API 
+# API
 
 <div class="info">
 <h4>💡 Info</h4>
@@ -13,7 +12,7 @@ All functions are curried, Remeda-style, so if you see `f(dataIn, ...others)`, i
 `updeep-remeda` exports a default function that is an alias to `u.update` and
 has all the other functions available as props.
 
-``` 
+```
 import u from '@yanick/updeep-remeda';
 
 const foo = u({a:1}, { a: x => x + 1 });
@@ -23,12 +22,12 @@ const bar = u.updateIn({ a: { b: 2 } }, 'a.b', 3 );
 
 Or you can import the functions piecemeal:
 
-``` 
+```
 import { updateIn, omit } from '@yanick/updeep-remeda';
 ```
 
-
 ## `u(dataIn, updates)`
+
 ## `u.update(dataIn, updates)`
 
 Update as many values as you want, as deeply as you want. The `updates` parameter can either be an object, a function, or a value. Everything returned from `u` is frozen recursively.
@@ -293,6 +292,18 @@ expect(result).to.eql({ value: 3 });
 Essentially the same as their Remeda counterparts. The difference being
 that if the transformation results in no change, the original object/array is
 returned.
+
+## `u.map(objectIn, updates)`
+
+Applies the updates on all entries of `objectIn`.
+
+## `u.mapIf(objectIn, predicate, updates)`
+
+Shorthand for `u.map( objectIn, u.if(predicate,updates) )`.
+
+## `u.mapIfElse(objectIn, predicate, updates, updatesElse)`
+
+Shorthand for `u.map( objectIn, u.ifElse(predicate,updates,updatesElse) )`.
 
 ## `u.matches(dataIn, condition)`
 
