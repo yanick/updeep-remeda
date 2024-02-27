@@ -1,2 +1,0 @@
-- [Getting started](/latest/)
-- [API](/latest/api)
