@@ -357,8 +357,10 @@ expect(alwaysFour(32)).to.eql(4);
 
 ### `u.if(dataIn, predicate, updates)`
 
-Apply `updates` if `predicate` is truthy, or if `predicate` is a function.
-It evaluates to truthy when called with `object`.
+Apply `updates` if `predicate` evaluates to true. The `predicate` can
+be a boolean, or a function taking in `dataIn` and returning a boolean,
+or an object, in which case it'll be treated as a shortcut for
+`u.matches(predicate)`.
 
 ```js
 function isEven(x) {
