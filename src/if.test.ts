@@ -5,7 +5,7 @@ import _if from "./if.js";
 describe("if", () => {
   test("does not update if the predicate is false", () => {
     const object = { a: 0 };
-    let result = _if(false, { b: 1 }, object);
+    let result = _if(object, false, { b: 1 });
     expect(result).to.eql(object);
 
     result = _if(0, false, 1);
@@ -21,7 +21,7 @@ describe("if", () => {
   test("will use the result of a function passed as a predicate", () => {
     const object = { a: 0 };
     const aIsThree = (x) => x.a === 3;
-    const result = _if(aIsThree, { b: 1 }, object);
+    const result = _if(aIsThree, { b: 1 })(object);
 
     expect(result).to.eql({ a: 0 });
   });

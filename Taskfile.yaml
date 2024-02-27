@@ -30,7 +30,7 @@ tasks:
   integrate:
     deps: [prettier, test, build]
     cmds:
-      - changeset status
+      - git diff-ls main | grep .changeset/
       - sh: git branch | grep '* {{.PARENT_BRANCH}}'
         msg: not on target
       - { task: checkout-clean }

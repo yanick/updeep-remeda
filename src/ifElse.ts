@@ -1,15 +1,14 @@
 import update from "./update.js";
 import wrap from "./wrap.js";
+import { Predicate, buildPredicate } from "./predicate.js";
 
 function updateIfElse(object, predicate, trueUpdates, falseUpdates) {
-  const test = typeof predicate === "function" ? predicate(object) : predicate;
+  const test = buildPredicate(predicate)(object);
 
   const updates = test ? trueUpdates : falseUpdates;
 
   return update(object, updates);
 }
-
-type Predicate = ((source: any) => boolean) | boolean;
 
 export interface IfElse {
   (object, predicate: Predicate, trueUpdates, falseUpdates): unknown;
