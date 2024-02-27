@@ -30,7 +30,7 @@ tasks:
   integrate:
     deps: [prettier, test, build]
     cmds:
-      - echo {{ .FILE_DELTA | catLines }} | grep CHANGELOG.yml
+      - changeset status
       - sh: git branch | grep '* {{.PARENT_BRANCH}}'
         msg: not on target
       - { task: checkout-clean }
