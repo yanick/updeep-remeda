@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+
+set name ( cat /usr/share/dict/american-english | shuf | head -3 | \
+    perl -e 'print lc( join "-", <> )=~ s/[\n\']//rg' )
+
+set filename .changeset/(date +"%FT%T")-$name.md
+
+echo "creating changeset at" $filename
+
+echo -e "---\n\"@yanick/updeep-remeda\": patch|minor|major\n---\n\n" > $filename
+
+git log main... --pretty=short >> $filename
+
+$EDITOR $filename
