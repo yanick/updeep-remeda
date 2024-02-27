@@ -13,6 +13,7 @@ import filter from "./filter.js";
 import reject from "./reject.js";
 import matches from "./matches.js";
 import myMap from "./map.js";
+import mapIf, { mapIfElse } from "./mapIf.js";
 
 const functions = {
   constant,
@@ -31,6 +32,8 @@ const functions = {
   skip,
   update,
   updateIn,
+  mapIf,
+  mapIfElse,
 };
 
 export {
@@ -50,6 +53,8 @@ export {
   skip,
   matches,
   myMap as map,
+  mapIf,
+  mapIfElse,
 };
 
 const merged = update;

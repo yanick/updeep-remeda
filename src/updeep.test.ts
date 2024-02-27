@@ -180,3 +180,8 @@ test("deep equality", () => {
 
   expect(u(deepOrig, [1, 2, [3, 4]])).toBe(deepOrig);
 });
+
+test("expect mapIf and mapIfElse to be present", () => {
+  expect(u.mapIf).toBeTypeOf("function");
+  expect(u.mapIfElse).toBeTypeOf("function");
+});
