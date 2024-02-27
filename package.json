@@ -13,7 +13,8 @@
     "Yanick Champoux"
   ],
   "files": [
-    "esm"
+    "esm",
+    "src"
   ],
   "keywords": [
     "immutable",
