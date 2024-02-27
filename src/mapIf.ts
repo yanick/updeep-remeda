@@ -2,7 +2,7 @@ import wrap from "./wrap.js";
 import matches from "./matches.js";
 import map from "./map.js";
 import ifElse from "./ifElse.js";
-import { buildPredicate } from "./predicate.js";
+import { Predicate, buildPredicate } from "./predicate.js";
 
 function _mapIfElse(object, predicate, trueUpdates, falseUpdates) {
   const test = buildPredicate(predicate);
