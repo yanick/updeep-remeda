@@ -2,7 +2,7 @@ import wrap from "./wrap.js";
 import constant from "./constant.js";
 import * as R from "remeda";
 
-import { omitBy, isObject, merge } from "remeda";
+import { omitBy, merge } from "remeda";
 
 const innerOmitted = { __skip: true };
 export const skip = constant(innerOmitted);
@@ -78,7 +78,7 @@ function update(object, updates) {
     return updates(object);
   }
 
-  if (Array.isArray(object) && R.equals(object, updates)) return object;
+  if (Array.isArray(object) && R.isDeepEqual(object, updates)) return object;
 
   if (!isPlainObject(updates)) {
     return updates;

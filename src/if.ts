@@ -1,7 +1,7 @@
-import { identity } from "remeda";
-
 import ifElse from "./ifElse.js";
 import wrap from "./wrap.js";
+
+const identity = (x: unknown) => x;
 
 export interface If {
   (object, predicate, trueUpdates): unknown;
