@@ -18,6 +18,6 @@ it("freezes the result", () => {
 
 it("doesn't change the obj if nothing is modified", () => {
   const orig = { a: 1 };
-  const result = pick<any, string>(["a"])(orig);
+  const result = pick(["a"])(orig);
   expect(result).to.be.equal(orig);
 });
