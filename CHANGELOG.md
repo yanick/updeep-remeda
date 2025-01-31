@@ -1,4 +1,4 @@
-# Changelog for [updeep-remeda](https://github.com/yanick/updeep-remeda)
+# Changelog for [@yanick/updeep](https://github.com/yanick/updeep)
 
 ## 2.3.1
 
