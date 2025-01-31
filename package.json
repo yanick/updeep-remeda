@@ -1,19 +1,19 @@
 {
   "type": "module",
-  "name": "@yanick/updeep-remeda",
+  "name": "@yanick/updeep",
   "version": "2.3.1",
   "description": "Easily update nested frozen objects and arrays in a declarative and immutable manner.",
-  "homepage": "https://yanick.github.io/updeep-remeda",
+  "homepage": "https://github.com/yanick/updeep",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yanick/updeep-remeda"
+    "url": "https://github.com/yanick/updeep"
   },
   "authors": [
     "Aaron Jensen",
     "Yanick Champoux"
   ],
   "files": [
-    "esm",
+    "dist",
     "src"
   ],
   "keywords": [
@@ -23,16 +23,16 @@
     "declarative"
   ],
   "source": "./src/index.ts",
-  "types": "./esm/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./esm/index.d.ts",
-      "import": "./esm/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yanick/updeep-remeda/issues"
+    "url": "https://github.com/yanick/updeep/issues"
   },
   "scripts": {},
   "dependencies": {

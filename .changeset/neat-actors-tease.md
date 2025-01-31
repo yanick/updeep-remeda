@@ -2,4 +2,4 @@
 "@yanick/updeep": minor
 ---
 
-update Remeda dependency
+rename module as @yanick/updeep

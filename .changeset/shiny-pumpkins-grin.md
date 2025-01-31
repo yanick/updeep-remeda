@@ -1,5 +1,5 @@
 ---
-"@yanick/updeep-remeda": patch
+"@yanick/updeep": patch
 ---
 
 upgrade all dependencies
