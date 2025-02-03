@@ -5,3 +5,4 @@ coverage
 contrib/add_change
 .prettierignore
 .npmignore
+.gitignore
