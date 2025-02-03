@@ -1,5 +1,16 @@
 # Changelog for [@yanick/updeep](https://github.com/yanick/updeep)
 
+## 2.4.0-alpha.0
+
+### Minor Changes
+
+- 6127945: rename module as @yanick/updeep
+- 9083184: update Remeda dependency
+
+### Patch Changes
+
+- 4fdc083: upgrade all dependencies
+
 ## 2.3.1
 
 ### Patch Changes

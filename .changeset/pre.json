@@ -1,0 +1,12 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@yanick/updeep": "2.3.1"
+  },
+  "changesets": [
+    "neat-actors-tease",
+    "perfect-ads-teach",
+    "shiny-pumpkins-grin"
+  ]
+}
