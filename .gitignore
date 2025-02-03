@@ -6,5 +6,7 @@ tsconfig*.tsbuildinfo
 lib
 types
 esm
+dist
 .perl-version
 .task
+dist
