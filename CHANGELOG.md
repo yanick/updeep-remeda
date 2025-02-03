@@ -1,5 +1,11 @@
 # Changelog for [@yanick/updeep](https://github.com/yanick/updeep)
 
+## 2.4.0-alpha.1
+
+### Patch Changes
+
+- 58be47d: move to esm
+
 ## 2.4.0-alpha.0
 
 ### Minor Changes

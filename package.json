@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@yanick/updeep",
-  "version": "2.4.0-alpha.0",
+  "version": "2.4.0-alpha.1",
   "description": "Easily update nested frozen objects and arrays in a declarative and immutable manner.",
   "homepage": "https://github.com/yanick/updeep",
   "repository": {
