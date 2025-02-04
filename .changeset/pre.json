@@ -5,6 +5,7 @@
     "@yanick/updeep": "2.3.1"
   },
   "changesets": [
+    "happy-moles-retire",
     "hot-pugs-switch",
     "neat-actors-tease",
     "perfect-ads-teach",

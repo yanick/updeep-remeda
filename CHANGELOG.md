@@ -1,5 +1,11 @@
 # Changelog for [@yanick/updeep](https://github.com/yanick/updeep)
 
+## 2.4.0-alpha.2
+
+### Patch Changes
+
+- previous release was missing files
+
 ## 2.4.0-alpha.1
 
 ### Patch Changes
